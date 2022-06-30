@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            animation: changeBG is linear infinite;
+            animation-name: changeBG;
+        }
+        @keyframes changeBG{
+           to {
+            filter: hue-rotate(360deg);
+           }
+        }
+        .loader{
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            /* top: calc(50% - (15px));
+            left: calc(50% - (15px)) ; */
+            border-radius: 50%;
+            animation: x-axis is ease-in-out alternate infinite;
+            animation-name: bog;
+           margin-left: 750px;
+           margin-top: 150px;
+        }
+        @keyframes bog{
+             0% {}
+        }
+        @keyframes x-axis{
+            0% {transform: translate(-60px);}
+            100% {transform: translate(60px);}
+        }
+        .loader::before{
+            content: '';
+            width: 110%;
+            height: 110%;
+            position: absolute;
+            background: #fff;
+            border-radius: 50%;
+            box-shadow:  0 0 15px rgba(255, 255, 0, 0.26),
+            0 0 30px rgb(233, 233, 7),
+            /* 0 0 60px rgb(243, 243, 216), */
+            /* 0 0 90px  rgba(255, 255, 46, 0.918); */
+            0 0 90px rgb(231, 164, 38);
+            animation-direction:  y-axis 0.5s ease-in-out 0.25s alternate infinite;
+        }
+       #h1{
+        color: white;
+        font-family: cursive;
+        margin-top: 250px;
+        margin-left: 150px;
+        
+       }
+        #p{
+            color: white;
+            margin-left: 150px;
+            font-weight: bolder;
+        }
+        @media screen and (max-width:600px ) {
+            .loader{
+                margin-left: 220px;
+            }
+            #div{
+                top: 0;
+                right: 0;
+                margin-left: 0;
+            
+            }
+            #h1{
+                margin-left: 0px;
+                font-size:23px ;
+            }
+            #p{
+font-size: 13px;
+            }
+        /* }
+    .circle{
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        /* box-shadow:  0 0 15px rgba(255, 255, 0, 0.26),
+            0 0 30px rgb(233, 233, 7),
+            /* 0 0 60px rgb(243, 243, 216), */
+            /* 0 0 90px  rgba(255, 255, 46, 0.918); */
+            /* 0 0 90px rgb(231, 164, 38); */ 
+            /* box-shadow: 0 0 15px orange,
+            0 0 50px white,
+            0 0 60px orange,
+            0 0 90px rgb(255, 255, 0);
+            border: 1px solid whitesmoke inset;
+            margin-left: 700px;
+         */
+    } */
+    </style>
+</head>
+<body>
+    <div id="div">
+    <h1 id="h1">Keep Your Face To<br> The Sun And You Will<br> Never See The Shadows </h1>
+    <p id="p">EMPEROR J TV<br> @08073934160</p>
+</div>
+    <div class="container">
+        <div class="loader"></div>
+    </div>
+   <div class="circle">
+
+   </div>
+</body>
+</html>
