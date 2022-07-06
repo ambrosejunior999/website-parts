@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div{
+            width: 100%;
+            justify-content: space-around;
+            display: flex;
+            height: 2%;
+        }
+        @media screen and (max-width:600px){
+            #dropdown{
+                width:400px;
+                height:200px ;
+            }
+            h3{
+                font-size: 13px;
+            }
+            #div{
+                justify-content: space-between;
+            }
+            
+        }
+        button{
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+        #dropdown{
+            width:250px;
+            height:150px;
+            border-radius:6px;
+            border: 1px solid black;
+            position: absolute;
+            display: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <button onclick="chelsea()"><h3>Chelsea</h3></button>
+        <button onclick="liverpool()"><h3>Liverpool</h3></button>
+        <button onclick="arsenal()"><h3>Arsenal</h3></button>
+        <button><h3>Juventus</h3></button>
+        <button><h3>Barcelona</h3></button>    
+    </div>
+    <div id="dropdown">
+
+    </div>
+</body>
+</html>
+<script>
+ let display = 0
+ let dropdown = document.getElementById('dropdown');
+  function chelsea() {
+if(display == 0){
+    dropdown.style.display = 'inherit'
+    display = 1
+}else if(display == 1){
+    dropdown.style.display = 'none'
+    display = 0
+}
+  } 
+  function liverpool() {
+    if(display == 0){
+    dropdown.style.display = 'inherit' 
+    dropdown.style.marginLeft = '20%' 
+    display = 1
+}else if(display == 1){
+    dropdown.style.display = 'none'
+    display = 0
+}
+  }
+</script>
